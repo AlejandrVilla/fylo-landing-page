@@ -1,76 +1,34 @@
-import TestimonialList from "./components/TestimonialList.jsx";
-import TestimonialItem from "./components/TestimonialItem.jsx";
-import "./home.scss";
-import FeatureList from "./components/FeatureList.jsx";
-import FeatureItem from "./components/FeatureItem.jsx";
 import { useState } from "react";
-
-const testimonials = [
-    {
-        description: "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
-        image: "/profile-1.jpg",
-        name: "Satish Patel",
-        job: "Founder & CEO, Huddle"
-    },
-    {
-        description: "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
-        image: "/profile-2.jpg",
-        name: "Bruce McKenzie",
-        job: "Founder & CEO, Huddle"
-    },
-    {
-        description: "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
-        image: "/profile-3.jpg",
-        name: "Iva Boyd",
-        job: "Founder & CEO, Huddle"
-    }
-]
-
-const features = [
-    {
-        icon: "./src/assets/icon-access-anywhere.svg",
-        title: "Access your files, anywhere",
-        description: "The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere."
-    },
-    {
-        icon: "./src/assets/icon-security.svg",
-        title: "Security you can trust",
-        description: "2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files."
-    },
-    {
-        icon: "./src/assets/icon-collaboration.svg",
-        title: "Real-time collaboration",
-        description: "Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required."
-    },
-    {
-        icon: "./src/assets/icon-any-file.svg",
-        title: "Store any type of file",
-        description: "Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared."
-    }
-];
-
-const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;  
+import TestimonialList from "home/components/TestimonialList";
+import TestimonialItem from "home/components/TestimonialItem";
+import FeatureList from "home/components/FeatureList";
+import FeatureItem from "home/components/FeatureItem";
+import { testimonials, features, emailPattern } from "utils/info";
+import illustrationIntroImg from "/illustration-intro.png";
+import illustrationProductiveImg from "/illustration-stay-productive.png";
+import iconArrow from "assets/icon-arrow.svg";
+import "./home.scss";
 
 const Home = () => {
     const [signUp, setSignUp] = useState(false);
     const [email, setEmail] = useState("");
 
     const handleClick = () => {
-      window.location.reload();  
+        window.location.reload();
     };
 
     const handleSignUp = () => {
-        const isValidEmail = emailPattern.test(email);  
-        if(isValidEmail)
+        const isValidEmail = emailPattern.test(email);
+        if (isValidEmail)
             setSignUp(false);
         else
-            setSignUp(true); 
+            setSignUp(true);
     }
 
     return (
         <div className="home">
             <div className="home-intro">
-                <img className="home-intro-image" src="/illustration-intro.png" alt="intro image" />
+                <img className="home-intro-image" src={illustrationIntroImg} alt="intro image" />
                 <h1 className="home-intro-title">All your files in one secure location, accessible anywhere.</h1>
                 <p className="home-intro-desc">Fylo stores all your most important files in one secure location. Access them wherever
                     you need, share and collaborate with friends family, and co-workers.</p>
@@ -85,7 +43,7 @@ const Home = () => {
                 ))}
             </FeatureList>
             <div className="home-description">
-                <img className="home-desc-image" src="/illustration-stay-productive.png" alt="productive image" />
+                <img className="home-desc-image" src={illustrationProductiveImg} alt="productive image" />
                 <div className="home-description-content">
                     <h1 className="home-desc-title">Stay productive, wherever you are</h1>
                     <p className="home-desc-text1">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
@@ -93,12 +51,12 @@ const Home = () => {
                     <div className="home-desc-link">
                         <a className="desc-link" href="">
                             <p>See how Fylo works</p>
-                            <img src="./src/assets/icon-arrow.svg" alt="arrow icon" />
+                            <img src={iconArrow} alt="arrow icon" />
                         </a>
                     </div>
                 </div>
             </div>
-            <TestimonialList quotesImage="/bg-quotes.png" >
+            <TestimonialList>
                 {testimonials.map((item, index) => (
                     <TestimonialItem
                         key={index}
@@ -112,12 +70,12 @@ const Home = () => {
                 <div className="home-contact-div">
                     <div className="home-contact-content">
                         <label htmlFor="contact">
-                            <input 
+                            <input
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                type="text" 
-                                id="contact" 
-                                placeholder="example@gmail.com" 
+                                type="text"
+                                id="contact"
+                                placeholder="example@gmail.com"
                             />
                         </label>
                         <button onClick={handleSignUp}>Get Started For Free</button>

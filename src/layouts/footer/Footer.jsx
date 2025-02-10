@@ -1,21 +1,28 @@
+import logo from "assets/logo.svg";
+import iconLocation from "assets/icon-location.svg";
+import iconPhone from "assets/icon-phone.svg";
+import iconEmail from "assets/icon-email.svg";
+import iconFacebook from "assets/icon-facebook.svg";
+import iconTwitter from "assets/icon-twitter.svg";
+import iconIg from "assets/icon-ig.svg";
 import "./footer.scss";
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <img className="footer-logo" src="./src/assets/logo.svg" alt="logo" />
+            <img className="footer-logo" src={logo} alt="logo" />
             <div className="footer-content">
                 <div className="footer-location">
-                    <img src="./src/assets/icon-location.svg" alt="location icon" />
+                    <img src={iconLocation} alt="location icon" />
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
                 <div className="footer-contact">
                     <div>
-                        <img src="./src/assets/icon-phone.svg" alt="phone icon" />
+                        <img src={iconPhone} alt="phone icon" />
                         <p>+1-543-123-4567</p>
                     </div>
                     <div>
-                        <img src="./src/assets/icon-email.svg" alt="email icon" />
+                        <img src={iconEmail} alt="email icon" />
                         <p>example@fylo.com</p>
                     </div>
                 </div>
@@ -31,9 +38,9 @@ const Footer = () => {
                     <p>Privacy</p>
                 </div>
                 <div className="footer-icons">
-                    <img className="facebook footer-icon" src="./src/assets/icon-facebook.svg" alt="facebook icon"/>
-                    <img className="twitter footer-icon" src="./src/assets/icon-twitter.svg" alt="twitter icon"/>
-                    <img className="ig footer-icon" src="./src/assets/icon-ig.svg" alt="ig icon"/>
+                    <img className="facebook footer-icon" src={iconFacebook} alt="facebook icon"/>
+                    <img className="twitter footer-icon" src={iconTwitter} alt="twitter icon"/>
+                    <img className="ig footer-icon" src={iconIg} alt="ig icon"/>
                 </div>
             </div>
         </footer>
