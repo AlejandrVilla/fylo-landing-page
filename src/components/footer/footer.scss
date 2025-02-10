@@ -1,0 +1,125 @@
+@use "../../sass/base.scss" as base;
+
+.footer{
+    width: 100%;
+    background-color: base.$dark-Blue-footer;
+    color: base.$light-white;
+    font-family: base.$sans-font-family;
+    font-style: base.$sans-font-style;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 200px 100px 50px 100px;
+    @media (width <= 1000px)
+    {
+        gap: 25px;
+        padding: 250px 25px 25px 25px;
+    }
+}
+
+.footer p{
+    font-size: base.$font-size-h4;
+}
+
+.footer-logo{
+    width: 150px;
+    @media(width <= 1000px){
+        width: 175px;
+    }
+}
+
+.footer-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    @media (width <= 1000px)
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.footer-location{
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    @media (width <= 1000px){
+        width: 100%;
+    }
+}
+
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    @media (width <= 1000px){
+        margin: 0 0 30px 0;
+    }
+}
+
+.footer-contact div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    @media(width <= 1000px){
+        gap: 10px;
+        margin: 15px 0 15px 0;
+    }
+}
+
+.footer-info p{
+    cursor: pointer;
+    transition: color ease 0.5s;
+}
+
+.footer-info p:hover{
+    color: base.$white;
+}
+
+.footer-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @media (width <= 1000px){
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+}
+
+.footer-icon{
+    width: 24px;
+    height: 24px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(215deg) brightness(101%) contrast(104%);
+    cursor: pointer;
+    transition: filter ease 0.5s;
+    @media(width <= 1000px){
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.footer-icon:hover{
+    filter: invert(89%) sepia(98%) saturate(6394%) hue-rotate(150deg) brightness(94%) contrast(87%);
+}

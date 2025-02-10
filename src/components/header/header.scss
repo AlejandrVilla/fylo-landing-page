@@ -1,0 +1,45 @@
+@use "../../sass/base.scss" as base;
+
+.header{
+    width: 100%;
+    font-family: base.$raleway-font-family;
+    font-style: base.$ralewat-font-style;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px 50px 50px;
+
+    @media (width <= 600px){
+        padding: 20px 20px 20px 20px;
+    }
+}
+
+.logo{
+    @media(width <= 600px){
+        width: 80px;
+    }
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+
+    @media (width <= 400px){
+        gap: 25px;
+    }
+}
+
+.nav-link{
+    color: base.$light-white;
+    cursor: pointer;
+    transition: color ease 0.5s;
+}
+
+.nav-link:hover{
+    color: base.$white;
+    text-decoration: underline;
+}

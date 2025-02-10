@@ -1,0 +1,228 @@
+@use "../../sass/base.scss" as base;
+
+.home{
+    width: 100%;
+    font-family: base.$sans-font-family;
+    font-style: base.$sans-font-style;
+    color: base.$light-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.home-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.home-intro-image{
+    @media(width <= 800px){
+        width: 300px;
+    }
+}
+
+.home-intro-title{
+    line-height: 60px;
+    font-size: base.$font-size-h1-body;
+    font-weight: base.$font-weight-h4;
+    color: base.$white;
+    text-align: center;
+    width: 700px;
+    @media(width <= 800px){
+        width: 330px;
+        font-size: base.$font-size-h1-mobile-body;
+        line-height: 35px;
+    }
+}
+
+.home-intro-desc{
+    line-height: 30px;
+    font-size: base.$font-size-p-body;
+    text-align: center;
+    width: 600px;
+    @media(width <= 800px){
+        width: 300px;
+        font-size: base.$font-size-p-mobile-body;
+        line-height: 23px;
+    }
+}
+
+.home-intro-button{
+    font-family: base.$raleway-font-family;
+    font-weight: base.$font-weight-h4;
+    font-size: base.$font-size-p;
+    width: 280px;
+    background: linear-gradient(90deg, rgba(101,226,217,1) 0%, rgba(51,158,204,1) 79%);
+    color: base.$white;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    @media(width <= 800px){
+        width: 240px;
+    }
+}
+
+.home-intro-button:hover{
+    background: rgb(101,226,217);
+}
+
+.home-description{
+    width: 100%;
+    padding: 75px 0 50px 0;
+    background-color: base.$dark-Blue-background;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    @media(width <= 1000px){
+        flex-direction: column;
+    }
+}
+
+.home-desc-image{
+    @media(width <= 800px){
+        width: 300px;
+    }
+}
+
+.home-description-content{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    @media(width <= 800px){
+        width: 280px;
+    }
+}
+
+.home-desc-title{
+    width: 300px;
+    color: base.$white;
+    @media(width <= 800px){
+        font-size: base.$font-size-h4-mobile;
+    }
+}
+
+.desc-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid base.$cyan;
+}
+
+.desc-link:hover{
+    border-bottom: 1px solid base.$white;
+}
+
+.desc-link p{
+    color: base.$cyan;
+}
+
+.desc-link:hover p{
+    color: base.$white;
+}
+
+.desc-link:hover img{
+    filter: invert(0%) sepia(95%) saturate(48%) hue-rotate(265deg) brightness(96%) contrast(100%);
+}
+
+.home-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: base.$dark-Blue-intro;
+    width: 850px;
+    padding: 40px 70px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #00000020;
+    position: absolute;
+    bottom: -120px;
+    @media(width <= 900px){
+        width: 325px;
+        padding: 30px 40px 30px 40px;
+        bottom: -180px;
+    }
+}
+
+.home-contact-title{
+    color: base.$white;
+    @media(width <= 800px){
+        font-size: base.$font-size-h4-mobile;
+    }
+}
+
+.home-contact-text{
+    width: 650px;
+    text-align: center;
+    @media(width <= 900px){
+        width: 100%;
+    }
+}
+
+.home-contact-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin: 20px 0 0 0;
+}
+
+.home-contact-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @media(width <= 900px){
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.home-contact-content input{
+    width: 475px;
+    border-radius: 30px;
+    height: 50px;
+    padding: 0 0 0 40px;
+    @media(width <= 900px){
+        width: 250px;
+    }
+}
+
+.home-contact-content button{
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgba(101,226,217,1) 0%, rgba(51,158,204,1) 79%);
+    color: base.$white;
+    cursor: pointer;
+    @media(width <= 900px){
+        width: 250px;
+    }
+}
+
+.home-contact-content button:hover{
+    background: rgb(101,226,217);
+}
+
+.home-contact-div p{
+    margin: 0 0 0 40px;
+    color: base.$light-Red;
+    @media(width <= 900px)
+    {
+        margin: 0 0 0 25px;
+    }
+}

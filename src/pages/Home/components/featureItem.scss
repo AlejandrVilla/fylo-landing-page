@@ -1,0 +1,29 @@
+@use "../../../sass/base.scss" as base;
+
+.home-feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.home-feature-icon{
+    margin: 0 0 10px 0;
+    @media(width <= 800px){
+        width: 50px;
+        margin: 0 0 20px 0;
+    }
+}
+
+.home-feature-title{
+    color: base.$white;
+}
+
+.home-feature-desc{
+    width: 350px;
+    text-align: center;
+    @media(width <= 800px){
+        width: 270px;
+    }
+}

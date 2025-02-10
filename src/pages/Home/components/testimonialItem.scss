@@ -1,0 +1,55 @@
+@use "../../../sass/base.scss" as base;
+
+.testimonial-item{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: base.$dark-Blue-testimonials;
+    padding: 40px 30px 30px 30px;
+    box-shadow: 10px 10px base.$dark-Blue-intro;
+    @media(width <= 800px){
+        padding: 30px 20px 20px 20px;
+        box-shadow: 0 0 10px base.$dark-Blue-intro;
+    }
+}
+
+.testimonial-item-description{
+    @media(width <= 800px){
+        font-size: 10px;
+    }
+}
+
+.testimonial-item-body{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.testimonial-item-image{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.testimonial-item-content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.testimonial-name{
+    font-size: 12px;
+    color: base.$white;
+}
+
+.testimonial-job{
+    font-size: 10px;
+    color: base.$light-white;
+}
