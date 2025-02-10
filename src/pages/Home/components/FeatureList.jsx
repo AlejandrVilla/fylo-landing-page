@@ -7,7 +7,7 @@ const getWindowType = (width) => {
 
 const FeatureList = ({ children }) => {
     const windowType = getWindowType(window.innerWidth);
-    const image = `/bg-curvy-${windowType}.svg`;
+    const image = `./bg-curvy-${windowType}.svg`;
 
     return (
         <div className="home-features">
